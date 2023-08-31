@@ -62,7 +62,15 @@ nav a {
 nav a.active {
   color: #ff4b00;
 }
-
+.img {
+  width: 2rem;
+  height: 4rem;
+}
+.todo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
 #error {
   color: red;
   margin: 1rem 0 1rem 0;

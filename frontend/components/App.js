@@ -9,11 +9,13 @@ export default class App extends React.Component {
 
   constructor() {
     super()
-    this.state = {
-      name: "",
-      id: "",
-      completed: false
-    }
+    this.state = [
+      {
+       name: "find kids",
+       id: "",
+       completed: false
+      }
+    ]
   }
 
   handleSubmit = () => {
@@ -28,7 +30,7 @@ export default class App extends React.Component {
     return (
       <div>
         Todo App
-        <TodoList />
+        <TodoList todos={this.state} />
         <Form />
       </div>
     )

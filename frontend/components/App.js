@@ -30,8 +30,11 @@ export default class App extends React.Component {
     }
   }
 
-  handleSubmit = () => {
-    
+  handleSubmit = (name) => {
+    this.setState({
+      ...this.state,
+      sampleData: this.state.sampleData.concat({ completed: false, id: getId(), name})
+    })
   }
   
   handleCompleted = id => {
@@ -53,9 +56,10 @@ export default class App extends React.Component {
 
     return (
       <div>
-        Todo App
         <TodoList todos={this.state.sampleData} handleCompleted={this.handleCompleted} />
-        <Form />
+        <Form handleSubmit={this.handleSubmit} />
+        
+          
       </div>
     )
   }
